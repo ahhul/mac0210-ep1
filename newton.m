@@ -11,11 +11,13 @@ function x0 = newton (f, df, x0)
     do
         prev = x0;
     
-        x0 = x0 - (f(x0) ./ df(x0));
+        x0 = x0 - (f (x0) ./ df (x0));
         
         i++;
 
-    until (abs (abs (prev) - abs (x0)) < lim_err)
+        err = abs (abs (prev - abs (x0)));
+
+    until (err < lim_err)
     
     disp(x0);
 
