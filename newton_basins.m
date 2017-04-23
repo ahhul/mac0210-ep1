@@ -2,7 +2,8 @@
 # Alunos:   Arthur Coser Marinho                NUSP: 
 #           Ludmila Ferreira Vicente e Silva    NUSP: 7557136
 
-function bla = newton_basins (f, l, u, p)
+function b = newton_basins (f, l, u, p)
+
    
 
 endfunction
