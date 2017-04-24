@@ -9,8 +9,9 @@ function b = newton_basins (f, df, l, u, p)
     [X, Y] = meshgrid (range_x, range_y);
     Z = X + Y * i;
     Z = newton (f, df, Z);
-    M = [X; Y; Z]'
-    disp(M);
-    dlmwrite('output.txt', M, "\n");
+    
+    M = [reshape(X, 1, p*p); reshape(Y, 1, p*p); reshape(Z, 1, p*p)]';
+    
+    dlmwrite('output.txt', M, ' ');
     
 endfunction
